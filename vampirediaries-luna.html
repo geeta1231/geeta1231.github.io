@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<head>
+<script src="/assets/jquery.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Shadows+Into+Light" rel="stylesheet">
+<style>
+body {
+  font-family: calibri, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #030335;
+}
+div {
+  height: 352px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: #aaaaaa;
+  margin: 60px 0 0 0;
+  color: pink;
+}
+h2 {
+  text-align: center;
+  color: #bbbbbb;
+  margin: 0px 0 70px 0;
+  color:purple;
+  font-family: 'Abril Fatface', cursive;
+}
+p {
+  color: rgba(255,255,25,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(236,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+
+
+.price {
+  float: right;
+}
+ul {
+      padding: 10px;
+      background: rgba(200,200,160,0.5);
+      text-align: center;
+    }
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+ <ul>
+      <li><button onclick=seasons1to3()>Season 1-3</button></li>
+      <li><button onclick=seasons4to6()>Season 4-6</button></li>
+      <li><button onclick=seasons7to8()>Season 7-8 </button></li>
+      <li><button onclick=shows()>More Like This </button></li>
+    </ul>
+<h1>Vampire Diaries</h1>
+<h2>An America Supernatural Thriller Tv Show</h2>
+<div id="estrellas"></div>
+
+
+<script>
+primeroDivs = [
+    '<div class="item" onclick=this.classList.toggle("show-description")><p>Season 1 Episode<span class="Episode">1-22</span><br /><small>In the small Virginia town of Mystic Falls, seventeen year old Elena Gilbert and Jeremy Gilbert are both in denial of their parents deaths, A mysterious new student,Stefan Salvatore,who is hiding a dark secret attracts attention from Elena.The brother of Stefan who is Damon Salvatore enters the picture; they have not seen each other for 15 years.</small></p></div>',
+    '<div class="item" onclick=this.classList.toggle("show-description")><p>Season 2 Episode <span class="Episode">1-22</span><br /><small>Picking up where the first season left off, Elena arrives home to discover the fates of Uncle John and Jeremy. Jeremy has not transitioned into a vampire, because he did not take enough drugs to die and the blood of Anna overcame the overdose. Damon, Bonnie, and Elena agree that Caroline needs blood of Damon to survive.</small></p></div>',
+    '<div class="item" onclick=this.classList.toggle("show-description")><p>Season 3 Episode <span class="Episode">1-22</span><br /><small>The eighteenth birthday of Elena arrives and Caroline holds a party. laus and Stefan hunt for werewolves so Klaus can create more hybrids. Damon returns the necklace that belongs to Elena to her for her birthday. Stefan returns home to warn Damon to stop tracking them by killing Andie. Stefan later calls Elena, but does not say anything and she promises she will find him. Jeremy continues to see the ghosts of Vicki and Anna. </small></p></div>',
+    '<div class="item" onclick=this.classList.toggle("show-description")><p>Summary 1 Episode <span class="Episode">1-22</span><br /><small>In Mystic Falls, Virginia, the teenage siblings Elena and Jeremy Gilbert still grieve the loss of their parents in a car accident. When the newcomer Stefan Salvatore arrives at the high school, Elena and Stefan feel a great attraction for each other and sooner they date. What Elena does not know is that Stefan is an ancient adolescent vampire that does not drink human blood anymore to avoid killing. However, when his evil brother Damon Salvatore arrives in Mystic Falls, his safety and his romance with Elena are compromised by Damon.</small></p></div>',
+    '<div class="item" onclick=this.classList.toggle("show-description")><p>Summary 2 Episode <span class="Episode">1-22</span><br /><small>Season three begins in the aftermath of the death of Jenna and the ceremony which lead the creation of Klaus being the first hybrid this has heavily affected Alaric, Elena, and Jeremy. Stefan is on a ripper binge where he can not control his urges for human blood and continues to become a darker character. In trying to help Stefan, Elena and Damon spend time together and they begin to realize that they have feelings for each other. The both feel guilt over this and do not speak about it out loud but it is a silent truth between the two of them. </small></p></div>'
+]
+
+segundoDivs = [
+    '<div class="item" onclick=this.classList.toggle("show-description")><p>Season 4 Episode <span class="Episode">1-23</span><br /><small> In this Season 4 premiere,Elena awakens on the morning after the accident to find the thing that she dreaded most has come true.</small></p></div>',
+    '<div class="item" onclick=this.classList.toggle("show-description")><p>Season 5 Episode <span class="Episode">1-22</span><br /><small>Elena is thrilled to move into the dorm at nearby Whitmore College with Caroline as her roomate,thinking that Bonnie will join them soon.</small></p></div>',
+    '<div class="item" onclick=this.classList.toggle("show-description")><p>Season 6 Episode <span class="Episode">1-22</span><br /><small>As a new season begins,Elena starts her sophmore year,and Caroline obsesses about reversing the spell cast on Mystic Falls. </small></p></div>'
+]
+
+tresDivs = [
+    '<div class="item" onclick=this.classList.toggle("show-description")><p>Season 7 Episode <span class="Episode">1-22</span><br /><small>Damon,Alaric and Bonnie return to Mystic Falls just as Stefan and Caroline make a deal with the Herectics.Stefan needs help from someone in Brooklyn.</small></p></div>',
+    '<div class="item" onclick=this.classList.toggle("show-description")><p>Season 8 Episode <span class="Episode">1-16</span><br /><small>Stefan discovers that the foul presence from the vault of the Armory has a terrible grip on Damon,and Caroline and Alaric scramble to protect the twins.</small></p></div>',
+    '<div class="item" onclick=this.classList.toggle("show-description")><p>Trailers <span class="shows">2</span><br /><small>More mysteries and secrets revealed.Thrilling and Horrors </small></p></div>'
+]
+
+cuatroDivs = [
+    '<div class="item" onclick=this.classList.toggle("show-description")><p>The Originals <span class="Seasons">1-5</span><br /><small>Klaus,the original vampire/werewolf hybrid,returns to New Orleans - which his family helped build - to investigate rumours of a plot against him,in this spin-off of The Vampire Diaries. He finds his former protege, Marcel,reigning powerful over its inhabitants,causing growing tension in the supernatural community.Klaus brother,Elijah, joins him, and they learn that werewolf Hayley has fallen into the hands of a defiant witch who has life-changing information.Klaus and Elijah plan to reclaim the city.</small></p></div>',
+    '<div class="item" onclick=this.classList.toggle("show-description")><p>Supernatural <span class="Seasons">1-?</span><br /><small>This haunting series follows the thrilling yet terrifying journeys of Sam and Dean Winchester, two brothers who face an increasingly sinister landscape as they hunt monsters. After losing their mother to a supernatural force, the brothers were raised by their father as soldiers who track mysterious and demonic creatures. Violent memories and relationship-threatening secrets add additional burdens on Sam and Dean as they investigate all things that go bump in the night. </small></p></div>',
+    '<div class="item" onclick=this.classList.toggle("show-description")><p>Teen wolf <span class="Season">1-6</span><br /><small>The high-school anonymity Scott McCall was trying to break free from could not have happened in a more mysterious,complicated way.While walking in the woods one night Scott encounters a creature,is bitten in the side,and his life is forever changed.Is he a human or a werewolf?Or a little bit of both?Controlling the strange urges he now feels is the toughest part,and he is afraid the urges could end up controlling him.Will the bite be a gift or a curse, especially as it relates to the mischievous Allison, whom Scott cannot get enough of? </small></p></div>',
+    '<div class="item" onclick=this.classList.toggle("show-description")><p>Beauty and the Beast <span class="Season">1-?</span><br /><small>While investigating a murder, Detective Catherine Chandler, discovers a clue that leads her to Dr. Vincent Keller, a man who supposedly died in Afghanistan in 2002. She realizes that she has met him before, years earlier when he saved her from an assault that left her mother dead, and that he suffers from a condition that causes rage to turn him into a monster, which has forced him out of society.</small></p></div>'
+]
+
+castseason1to3Images = [
+    'url("https://imgix.bustle.com/rehost/2016/9/13/282976a6-12d9-4694-9e14-96fe4cef6922.jpg?w=970&h=546&fit=crop&crop=faces&auto=format&q=70”)',
+    'url("https://vignette.wikia.nocookie.net/vampirediaries/images/f/f3/202098-6db62-36553358-m750x740-u7d09b.jpg/revision/latest?cb=20171030023154")',
+    'url("https://www.squarepig.in/wp-content/uploads/2017/10/vampirediary-2.jpg")',
+    'url("https://obnoxiousandanonymous.files.wordpress.com/2014/09/the-vampire-diaries-season5-2.jpg")',
+    'url("https://www.hypable.com/wp-content/uploads/2012/06/season3.jpg")'
+]
+
+castseason4to6Images = [
+     'url("http://wetpaint.com/wp-content/uploads/2012/5/w630_TVD3201909r-2749467744579233781.jpg")',
+    'url("http://cdn01.cdn.justjaredjr.com/wp-content/uploads/headlines/2012/10/vampire-diaries-cast-banner.jpg")',
+    'url("https://data.christianpost.com/full/79203/img.jpg")'
+]
+   
+castseason7to8Images = [
+    'url("https://akns-images.eonline.com/eol_images/Entire_Site/201398/rs_560x415-131008180607-1024.cw.cm.10813_copy.jpg?fit=inside|900:auto&output-quality=90")',
+    'url("http://www.thetvtype.com/wp-content/uploads/2016/12/the-vampire-diaries-season-8-poster-full.jpg")',
+    'url("https://tvseriesfinale.com/wp-content/uploads/2016/01/The-Vampire-Diaries-TV-show-on-The-CW-season-6-cancelled-or-renewed.png")',
+]
+
+similarshowsImages = [
+    'url("https://cdn-images-1.medium.com/max/1600/1*vmOBqykFcmqz2QK231pZnA.jpeg")',
+    'url("http://www.followingthenerd.com/site/wp-content/uploads/Supernatural.jpg")',
+    'url("https://blog.tunefind.com/wp-content/uploads/2017/09/teenwolf.jpg")',
+    'url("http://themaddrive.weebly.com/uploads/1/6/2/7/16279298/6850091_orig.jpg")',
+]
+
+
+    
+function seasons1to3() {
+  azul = document.getElementById("estrellas")
+  azul.innerHTML = ''
+  azul.innerHTML += primeroDivs[0]
+  azul.innerHTML += primeroDivs[1]
+  azul.innerHTML += primeroDivs[2]
+  azul.innerHTML += primeroDivs[3]
+  azul.innerHTML += primeroDivs[4]
+   //alert("You have picked the episodes of season 1-4")
+   items = document.getElementsByClassName("item")
+   for (i=0; i<5; i=i+1) {
+		items[i].style.background = castseason1to3Images[i]
+		items[i].style.backgroundSize = '100% 100%'
+    }  
+}
+
+function seasons4to6() {
+  verde = document.getElementById("estrellas")
+  verde.innerHTML = ''
+  verde.innerHTML += segundoDivs[0]
+  verde.innerHTML += segundoDivs[1]
+  verde.innerHTML += segundoDivs[2]
+    //alert("You have picked the episodes of season 4-6")
+    items = document.getElementsByClassName("item")
+    for (i=0; i<3; i=i+1) {
+  	items[i].style.background = castseason4to6Images[i]
+  	items[i].style.backgroundSize = '100% 100%'
+    }
+}
+
+function seasons7to8() {
+  rosa = document.getElementById("estrellas")
+  rosa.innerHTML = ''
+  rosa.innerHTML += tresDivs[0]
+  rosa.innerHTML += tresDivs[1]
+  rosa.innerHTML += tresDivs[2]
+    //alert("You have picked the episodes of season 7-8")
+    items = document.getElementsByClassName("item")
+    for (i=0; i<3; i=i+1) {
+  	items[i].style.background = castseason7to8Images[i]
+  	items[i].style.backgroundSize = '100% 100%'
+    }
+}
+
+function shows() {
+  rojo = document.getElementById("estrellas")
+  rojo.innerHTML = ''
+  rojo.innerHTML += cuatroDivs[0]
+  rojo.innerHTML += cuatroDivs[1]
+  rojo.innerHTML += cuatroDivs[2]
+  rojo.innerHTML += cuatroDivs[3]
+    //alert("You have picked the choice to view similar shows")
+    items = document.getElementsByClassName("item")
+    for (i=0; i<4; i=i+1) {
+  	items[i].style.background = similarshowsImages[i]
+  	items[i].style.backgroundSize = '100% 100%'
+  }
+}
+
+
+</script>
+
+</body>
