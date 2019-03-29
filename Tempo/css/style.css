@@ -22,6 +22,11 @@ h1
 {
 	font-size: 36px;
 }
+@media (max-width: 500px) {
+h1 {
+	font-size: 24px;
+	}
+}
 /**************************************
 Header
 **************************************/
@@ -557,7 +562,7 @@ font-family: 'Margarine', cursive;
 #banner
 {
     background: url('http://sachtimes.com/en/wp-content/uploads/2017/07/images_pakistani-courts.jpg') no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     min-height: 500px;
 }
 .cta2 .btn-default,.cta2 .btn-default:hover,.cta2 .btn-default:focus
