@@ -22,11 +22,7 @@ h1
 {
 	font-size: 36px;
 }
-@media (max-width: 500px) {
-h1 {
-	font-size: 16px;
-	}
-}
+
 /**************************************
 Header
 **************************************/
@@ -169,6 +165,11 @@ a.btn-banner:hover, a.btn-banner:focus
 .container .jumbotron, .container-fluid .jumbotron {
     padding-right: 60px;
     padding-left: 0px;
+}
+@media (max-width: 500px) {
+h1 {
+	font-size: 16px;
+	}
 }
 .bgblue-dark
 {
