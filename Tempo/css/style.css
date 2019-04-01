@@ -166,11 +166,7 @@ a.btn-banner:hover, a.btn-banner:focus
     padding-right: 60px;
     padding-left: 0px;
 }
-@media (max-width: 500px) {
-.jumbotron h1.small {
-	font-size: 16px;
-	}
-}
+
 .bgblue-dark
 {
     background-color: #2C3E50;
@@ -666,7 +662,7 @@ p.cta-sub-title {
     padding: 56px 20px 20px;
 }
 .jumbotron h1.small {
-    font-size: 44px;
+    font-size: 30px;
 }
 h1.cta-title {
     font-size: 30px;
