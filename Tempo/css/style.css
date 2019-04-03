@@ -8,6 +8,19 @@
 /**************************************
 link & button
 **************************************/
+@media (max-width: 500px) {
+	.container {
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+	}
+	.row {
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+	}	
+}
+
 .white
 {
 	color:#fff !important;
