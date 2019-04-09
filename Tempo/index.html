@@ -57,8 +57,8 @@
         <div class="jumbotron">
           <h1 class="small">Introducing <span class="bold">One of the Best Law Firm</span></h1>
           <p class="big">CEO Geeta Rohit</p>
-          <a href="#" class="btn btn-banner">More info<i class="fa fa-send"></i></a>
-        </div>
+          <a class="btn btn-banner" onclick=mine(0)>More info<i class="fa fa-send"></i></a>
+        </div> <div class="item"> </div>
       </div>
     </div>
   </div>
@@ -87,16 +87,17 @@
 		<div class="row">
         <div class="col-md-4">
           <div class="service-box">
-            <div class="service-icon"><i class="fa fa-handshake-o"></i></div>
+            <div class="service-icon"><i class="fa fa-handshake-o" onclick=mine(1)></i></div>  <div class="item"> </div>
             <div class="service-text">
               <h3>Interview Clients</h3>
-              <p>Get to kow your clients and their business.</p>
+              <p>Get to kow your clients and their business.</p>  
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="service-box">
-            <div class="service-icon"><i class="fa fa-share-alt"></i></div>
+            <div class="service-icon"><i class="fa fa-share-alt" onclick=mine(2)></i></div>
+			<div class="item"> </div>
             <div class="service-text">
               <h3>Counseling</h3>
               <p> Help clients to create contracts and give advice about corporate law.</p>
@@ -105,7 +106,8 @@
         </div>
         <div class="col-md-4">
           <div class="service-box">
-            <div class="service-icon"><i class="fa fa-user-circle"></i></div>
+            <div class="service-icon"><i class="fa fa-user-circle" onclick=mine(3)></i></div>
+			<div class="item"> </div>
             <div class="service-text">
               <h3>Assign to one of our lawyers</h3>
               <p> Help clients and provide them with solutions.</p>
@@ -119,7 +121,8 @@
         </div>
 		<div class="col-md-4">
           <div class="service-box">
-            <div class="service-icon"><i class="fa fa-balance-scale"></i></div>
+            <div class="service-icon"><i class="fa fa-balance-scale" onclick=mine(4)></i></div>
+			<div class="item"> </div>
             <div class="service-text">
               <h3>Confidentiality</h3>
               <p> We protect our clients and their information.</p>
@@ -229,5 +232,30 @@
 
 </body>
 
-</html>
+<script>
+	items = document.getElementsByClassName("item")
+	primero = [
+		"Email us",
+		"You have to schedule appointment",
+		"Provide all types of conflicts",
+		"Select one specific lawyer to handle your situation",
+		"We always keep our client's happiness in mind"
+	]
+	
+	
+	
+	function mine(x) {
+		if ( items[x].innerHTML == " ")
+		{ items[x].innerHTML = primero[x] }
+		else { items[x].innerHTML = " "}	
+		//alert("Contact us at 929-456-7546")
+		
+		
+	}
 
+
+
+</script>
+
+
+</html>
