@@ -8,19 +8,6 @@
 /**************************************
 link & button
 **************************************/
-@media (max-width: 500px) {
-	.container {
-		padding: 0;
-		margin: 0;
-		overflow: hidden;
-	}
-	.row {
-		padding: 0;
-		margin: 0;
-		overflow: hidden;
-	}	
-}
-
 .white
 {
 	color:#fff !important;
@@ -35,7 +22,6 @@ h1
 {
 	font-size: 36px;
 }
-
 /**************************************
 Header
 **************************************/
@@ -179,7 +165,6 @@ a.btn-banner:hover, a.btn-banner:focus
     padding-right: 60px;
     padding-left: 0px;
 }
-
 .bgblue-dark
 {
     background-color: #2C3E50;
@@ -572,7 +557,7 @@ font-family: 'Margarine', cursive;
 #banner
 {
     background: url('http://sachtimes.com/en/wp-content/uploads/2017/07/images_pakistani-courts.jpg') no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     min-height: 500px;
 }
 .cta2 .btn-default,.cta2 .btn-default:hover,.cta2 .btn-default:focus
@@ -639,7 +624,7 @@ cta
     padding-top: 15px;
 }
 .jumbotron h1.small {
-    font-size: 36px;
+    font-size: 44px;
 }
 h1.cta-title {
     font-size: 30px;
@@ -675,7 +660,7 @@ p.cta-sub-title {
     padding: 56px 20px 20px;
 }
 .jumbotron h1.small {
-    font-size: 30px;
+    font-size: 44px;
 }
 h1.cta-title {
     font-size: 30px;
