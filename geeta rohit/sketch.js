@@ -62,7 +62,8 @@ function draw() {
   if (time > 0) {
   background(152,251,152);
   fill(255,192,203)
-  circle(x,y,25)
+  circle(x,y,25)    
+ if (touches.length == 0)   {
   if (keyIsDown(LEFT_ARROW)) {
     x = x - 12
   }  
@@ -75,6 +76,7 @@ function draw() {
   if (keyIsDown(DOWN_ARROW)) {
     y = y + 12
   }
+ }
   fill(128, 255, 212)
   circle(a,b,22)
   a = a + 6 *direction_s1
