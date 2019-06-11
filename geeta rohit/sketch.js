@@ -77,6 +77,12 @@ function draw() {
     y = y + 12
   }
  }
+	  
+else { 
+		x = touches[0].x
+		y = touches[0].y
+}
+
   fill(128, 255, 212)
   circle(a,b,22)
   a = a + 6 *direction_s1
